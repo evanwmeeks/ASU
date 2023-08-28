@@ -1,0 +1,15 @@
+public class ArrayDemo
+{
+   public static void main(String[] args)
+   {
+      String[][] board =
+      {
+         {"x", "o", "x"},
+         {"o", "o", " "},
+         {" ", "x", " "}
+         
+      };
+
+      Util2D.print(board);
+   }
+}

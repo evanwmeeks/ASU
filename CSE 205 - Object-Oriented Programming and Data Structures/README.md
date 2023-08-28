@@ -1,0 +1,3 @@
+This folder is a compliation of coursework from Arizona State University's "CSE 205 - Object-Oriented Programming and Data Structures". The first 3 chapters are purposefully omitted, as they were review work from CSE 110. 
+
+Only Challenge Activities are represented within these documents, with all Participation Activities having been ommitted. Even still, Challenge Activities that were multi-level were left out as well as they were difficult to capture yet provided little educational value. 

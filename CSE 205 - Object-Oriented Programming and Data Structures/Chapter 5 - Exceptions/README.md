@@ -1,0 +1,1 @@
+This folder was purposefully left empty, as Chapter 5 contained no Challenge Activities that were not multi-leveled. 

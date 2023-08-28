@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class HelperMethods
+{
+   public static void main(String[] args)
+   {
+      Scanner in = new Scanner(System.in);
+      double total = in.nextDouble();
+      double taxRate = in.nextDouble();
+
+      int totalPennies = getPennies(total);
+      int taxPennies = getPennies(total * taxRate);
+
+      System.out.println("totalPennies: " + totalPennies);
+      System.out.println("taxPennies  : " + taxPennies);
+   }
+
+   /**
+      Gets a given amount in pennies.
+      @param amount an amount in dollars and cents
+      @return the number of pennies in the amount
+   */
+
+   
+   public static int getPennies(double pennies)
+   {
+      return (int) Math.round(pennies * 100) % 100;
+   }
+
+
+}
