@@ -1,0 +1,38 @@
+public static BankAccount makeBankAccount(String s1, String s2) {
+	BankAccount account = new BankAccount();
+	account.accountHolderName = s1;
+	account.accountNumber = s2;
+	account.accountBalance =
+	return account;
+
+
+public static void displayAccountInfo(BankAccount b) {
+	System.out.println("Account number      : " + b.accountNumber);
+	System.out.println("Account holder name : " + b.accountHolderName);
+	System.out.printf("Account Balance     : $%.2f\n", b.accountBalance);
+
+}
+
+public static void chargeServiceFee(BankAccount b, double x) {
+	b.accountBalance -= x;
+}
+
+public static void applyInterest(BankAccount b, double x){
+	double interest = b.accountBalance * x;
+	b.accountBalance +=interest;
+
+}
+
+public static void payBills(BankAccount b, double rent, double utilities, double phone) {
+	b.withdraw(rent);
+	b.withdraw(utilities);
+	b.withdraw(phone);
+
+}
+
+public static void depositChecks (BankAccount b, double pay, double commission){
+	b.deposit(pay);
+	b.deposit(commission);
+
+}
+

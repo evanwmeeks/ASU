@@ -1,0 +1,236 @@
+10.31
+
+// import any necessary packages here below
+
+public class Main {
+   public static void main(String[] args) {
+      // write any code to test you method(s) here below
+      int [] array = {1,2,3,4,5};
+      printArray(array, "-");
+      
+   }
+   
+   // define your method(s) here below
+   public static void printArray(int[] arr, String sep){
+
+for(int i=0; i<arr.length-1;i++){
+
+System.out.print(arr[i]+sep);
+
+}
+
+System.out.println(arr[arr.length-1]);
+
+}
+   
+}
+##############################################################################
+10.32
+
+public class Main {
+   public static void main(String[] args) {
+      // you may wish to write some code in this main method
+      // to test your method.
+      int [] array = {1, 22, 333, 400, 5005, 9};
+      System.out.println(countGreaterThan(array, 100));
+   }
+   
+   // define your method(s) here below
+   public static int countGreaterThan (int [] array, int thres) {
+      int count = 0;
+      for (int i = 0; i < array.length; i++) {
+         if(array[i] > thres) {
+            count++;
+            }
+      }
+      return count;
+   }
+}
+##############################################################################
+10.33
+
+public class Main {
+   public static void main(String[] args) {
+      // you may wish to write some code in this main method
+      // to test your method.
+      int [] array = {1, 2, 3, 4, 5};
+      System.out.println(countLessThan(array, 3));
+   }
+   
+   
+   public static int countLessThan(int [] arr, int thres) {
+      int count = 0;
+      for(int i=0; i<arr.length;i++) {
+         if (arr[i] < thres) {
+            count++;
+            }
+      }
+      return count;
+   }
+         
+   
+}
+##############################################################################
+10.34
+
+public class Main {
+   public static void main(String[] args) {
+      // you may wish to write some code in this main method
+      // to test your method.
+      int [] array = {5, 3, 4, 1, 2};
+      System.out.print(getIndexOfMin(array));
+   }
+   
+   public static int getIndexOfMin(int [] arr) {
+      int min = arr[0];
+      int index = 0;
+      for(int i = 0; i < arr.length; i++) {
+         if(min > arr[i] ){
+         min = arr[i];
+         index = i;
+         }
+      }
+      return index;
+   }
+   
+}
+##############################################################################
+10.35
+
+public class Main {
+   public static void main(String[] args) {
+      // you may wish to write some code in this main method
+      // to test your method.
+      int [] array = {5, 3, 4, 1, 2};
+      System.out.println(getIndexOfMax(array));
+   }
+   
+   public static int getIndexOfMax(int [] arr) {
+      int index = 0;
+      int max = arr[0];
+      for(int i=0; i<arr.length; i++) {
+         if(max < arr[i]) {
+            max = arr[i];
+            index = i;
+         }
+      }
+      return index;
+   }
+}
+##############################################################################
+10.36
+
+public class Main {
+   public static void main(String[] args) {
+      // you may wish to write some code in this main method
+      // to test your method.
+      int [] array = {5, 3, 4, 1, 2};
+      System.out.println(getAllButLast(array));
+   }
+   
+   
+   public static int [] getAllButLast (int [] arr) {
+      int [] newArray = new int [arr.length-1];
+      for (int i =0; i < arr.length-1; i++) {
+         newArray[i] = arr[i];
+      }
+      return newArray;
+   }
+}
+##############################################################################
+10.37
+public class Main {
+   public static void main(String[] args) {
+      // you may wish to write some code in this main method
+      // to test your method.
+      int[] myArray = {1, 22, 333, 400, 5005, 9};
+      int [] returnArray = getInRange(myArray, 100, 1000);
+      for(int value:returnArray) {
+         System.out.print(value);
+   }
+   }
+   
+   
+   public static int [] getInRange(int [] arr, int begin, int end) {
+      int count = 0; 
+      for (int value:arr) {
+         if((value <= end ) && (value >= begin)) {
+            count ++;
+         }
+      }
+      int returnIndex = 0;
+      int [] returnArray = new int[count];
+      
+      for(int value : arr) {
+         if ((value <= end) && (value >= begin)) {
+            returnArray[returnIndex] = value;
+            returnIndex++;
+         }
+      }
+      return returnArray;
+   }
+   
+}
+
+##############################################################################
+10.38
+public class Main {
+   public static void main(String[] args) {
+      // you may wish to write some code in this main method
+      // to test your method.
+      int[] myArray = {22, 5005, 400, 333, 1, 9};
+      int[] srtdArray = {1, 9, 22, 333, 400, 5005};
+      boolean result1, result2;
+      result1 = isSorted(myArray);
+      result2 = isSorted(srtdArray);
+      
+      System.out.println(result1);
+      System.out.println(result2);
+   }
+   
+   public static boolean isSorted(int[] arr) {
+      for( int i = 0; i <= arr.length-2; i++) {
+         int j = i+1; 
+         if(arr[i] > arr[j]) {
+            return false;
+         }
+      } 
+      return true;
+   }
+   
+   
+   
+}
+##############################################################################
+10.39
+public class Main {
+   public static void main(String[] args) {
+      // you may wish to write some code in this main method
+      // to test your method.
+      int[] myArray = {1, 22, 333, 400, 5005, 9};
+      int [] returnArray = getAllLessThan(myArray, 300);
+      for(int value:returnArray) {
+         System.out.print(value +" ");
+   }
+   }
+   
+   public static int [] getAllLessThan(int [] arr, int x) {
+      int count = 0; 
+      for(int value:arr) {
+         if (value < x) {
+            count ++ ;
+            }
+      }
+      int [] returnArray = new int[count];
+      int returnIndex = 0;
+      for(int value:arr) {
+         if (value < x) {
+            returnArray[returnIndex] = value;
+            returnIndex++;
+         }
+      }
+      return returnArray;
+      
+   }
+   
+}

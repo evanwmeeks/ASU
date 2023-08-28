@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+/Users/evanmeeks/Documents/ASU/CSE110/ClimateData/.metadata/.plugins/org.eclipse.jdt.core
+3981961839.index
+3993692313.index
+1865797976.index
+1056080266.index

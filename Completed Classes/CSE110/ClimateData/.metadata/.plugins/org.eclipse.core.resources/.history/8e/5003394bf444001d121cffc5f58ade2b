@@ -1,0 +1,97 @@
+// Implement your ClimateZone class in this file
+import java.util.*;
+import java.io.*;
+public class ClimateZone {
+	
+	private ArrayList<City> cityList = new ArrayList<City>();
+	
+	public ClimateZone() {
+		ArrayList<City> cityList = new ArrayList<City>();
+		
+	}
+	
+	public ClimateZone(String inputFile) throws IOException{
+		ArrayList<City> cityList = new ArrayList<City>();
+		File text = new File(inputFile);
+		Scanner scnr = new Scanner(text);
+		while(scnr.hasNextLine()) {
+			String city = scnr.next();
+			String state = scnr.next();
+			Double highTemp = Double.parseDouble(scnr.next());
+			Double lowTemp = Double.parseDouble(scnr.next());
+			addCity(city, state, highTemp, lowTemp);
+		}
+		scnr.close();
+		
+	}
+	
+	public void addCity(String cityName, String stateName, Double highTemp, Double lowTemp) {
+		City c = new City(cityName, stateName, highTemp, lowTemp);
+		cityList.add(c);
+	}
+	
+	public int getCityCount() {
+		return cityList.size();
+	}
+	
+	public City getCityByName(String s1, String s2) {
+		for(int i = 0; i<cityList.size(); i++) {
+			City c = cityList.get(i);
+			String name = c.getName();
+			String state = c.getState();
+			if(s1.equals(name) && s2.equals(state) ) {
+				return c;
+			}
+			
+		}
+		return null;
+	}
+	
+	public void printHottestCities() {
+		City first =null;
+		City second = null;
+		double hottest = 0;
+		for(City currentCity : cityList) {
+			if(currentCity.getHighTemp() > hottest) {
+				first = currentCity;
+				hottest = currentCity.getHighTemp();
+			}
+		}
+		hottest = 0;
+		for(City currentCity :cityList) {
+			if((currentCity.getHighTemp() > hottest) &&(currentCity !=first)){
+				second = currentCity;
+				hottest = currentCity.getHighTemp();
+			}
+		}
+		first.printInfo();
+		second.printInfo();
+	}
+	
+	public void printColdestCities() {
+		City first = null;
+		City second = null;
+		double coldest = 1000;
+		for(City currentCity : cityList) {
+			if(currentCity.getLowTemp() < coldest) {
+				first = currentCity;
+				coldest = currentCity.getLowTemp();
+			}
+		}
+		coldest = 1000;
+		for(City currentCity : cityList) {
+			if((currentCity.getLowTemp() < coldest) && (currentCity !=first)) {
+				second = currentCity;
+				coldest = currentCity.getLowTemp();
+			}
+		}
+		first.printInfo();
+		second.printInfo();
+	}
+	
+	public void printAllCities() {
+	for(City c:cityList) {
+		c.printInfo();
+	}
+	}
+}

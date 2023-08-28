@@ -1,0 +1,13 @@
+package sandbox;
+
+public class Main {
+	public static void main(String[] args) {
+		Box myBox = new Box(5, 10, 2);
+		if (myBox.isTall())
+		    System.out.println("Box is taller than it is wide or long");
+		else
+		    System.out.println("Box is not taller than it is wide and long");
+
+	}
+
+}

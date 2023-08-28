@@ -1,0 +1,44 @@
+// Implement your City class in this file
+public class City {
+	private String name;
+	private String state;
+	private Double highTemp;
+	private Double lowTemp;
+	public City (String name, String state, Double highTemp, Double lowTemp) {
+		this.name = name;
+		this.state = state;
+		this.highTemp = highTemp;
+		this.lowTemp = lowTemp;
+
+	}
+
+public String getName() {
+	return name;
+}
+
+public String getState() {
+	return state;
+}
+
+public Double getHighTemp() {
+	return highTemp;
+}
+
+public Double getLowTemp() {
+	return lowTemp;
+}
+
+public void setHighTemp(Double highTemp) {
+	this.highTemp = highTemp;
+}
+
+public  void setLowTemp(Double lowTemp) {
+	this.lowTemp = lowTemp;
+}
+
+public void printInfo() {
+	System.out.printf("%s, %s (High = %.2f, Low = %.2f)\n", getName(), getState(), getHighTemp(), getLowTemp());
+}
+
+
+}

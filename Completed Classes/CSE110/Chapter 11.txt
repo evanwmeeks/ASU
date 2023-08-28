@@ -1,0 +1,196 @@
+11.12
+
+// import any necessary packages here below
+import java.util.ArrayList;
+import java.util.Arrays;
+public class Main {
+   public static void main(String[] args) {
+      // write any code to test you method(s) here below
+      ArrayList <Integer> myArray = new ArrayList <Integer>(Arrays.asList(1, 22, 333, 400, 5005, 9));
+      printArrayList(myArray, ", ");
+   }
+   
+   // define your method(s) here below
+   public static void printArrayList(ArrayList <Integer> myArray, String s) {
+      for(int i = 0; i < myArray.size()-1;  i++){
+         System.out.print(myArray.get(i) + s);
+      }
+      System.out.print(myArray.get(myArray.size()-1));
+   }
+   
+}
+##############################################################################
+11.13
+
+import java.util.ArrayList;
+public class Main {
+   public static void main(String[] args) {
+      // you may wish to write some code in this main method
+      // to test your method.
+      ArrayList<Integer> myArray = new ArrayList <Integer>();
+      myArray.add(1);
+      myArray.add(2);
+      myArray.add(1);
+      myArray.add(3);
+      myArray.add(2);
+      myArray.add(5);
+      myArray.add(6);
+      myArray.add(2);
+      myArray.add(4);
+      
+      System.out.println(myArray);
+      System.out.println(count(myArray, 2));
+      
+      
+   }
+   
+   public static int count(ArrayList <Integer> myArray, int x) {
+      int count = 0;
+      for(int i =0; i < myArray.size(); i++) {
+         if(myArray.get(i)==x) {
+            count++;
+         }
+      }
+      return count;
+   }
+   
+}
+##############################################################################
+11.14
+
+import java.util.ArrayList;
+public class Main {
+   public static void main(String[] args) {
+      // you may wish to write some code in this main method
+      // to test your method.
+      ArrayList<Integer> myArray = new ArrayList <Integer>();
+      myArray.add(1);
+      myArray.add(2);
+      myArray.add(1);
+      myArray.add(3);
+      myArray.add(2);
+      myArray.add(5);
+      myArray.add(6);
+      myArray.add(2);
+      myArray.add(4);
+      
+      System.out.println(myArray);
+      System.out.println(count(myArray, 2));
+      
+      
+   }
+   
+   public static int count(ArrayList <Integer> myArray, int x) {
+      int count = 0;
+      for(int i =0; i < myArray.size(); i++) {
+         if(myArray.get(i)==x) {
+            count++;
+         }
+      }
+      return count;
+   }
+   
+}
+##############################################################################
+11.15
+
+import java.util.ArrayList;
+
+public class Main {
+   public static void main(String[] args) {
+      // you may wish to write some code in this main method
+      // to test your method.
+      ArrayList <Integer> myArray = new ArrayList <Integer> ();
+      myArray.add(3);
+      myArray.add(2);
+      myArray.add(7);
+      myArray.add(5);
+      myArray.add(8);
+      myArray.add(6);
+      System.out.print(getAllOdd(myArray));
+   }
+   
+   public static ArrayList<Integer> getAllOdd(ArrayList<Integer> array) {
+      ArrayList <Integer> odd = new ArrayList <Integer> ();
+      for(int i = 0; i<array.size(); i++) {
+         if(array.get(i) %2 !=0) {
+            odd.add(array.get(i));
+         }
+      }
+      return odd;
+   }
+   
+}
+##############################################################################
+
+11.16
+import java.util.ArrayList;
+
+public class Main {
+   public static void main(String[] args) {
+      // you may wish to write some code in this main method
+      // to test your method.
+   }
+   
+   public static boolean contains(ArrayList<Integer> list, int number) {
+      for(int i : list) {
+         if (i ==number) {
+            return true; 
+         }
+      }
+      return false;
+   }
+   public static ArrayList<Integer> noDuplicates(ArrayList<Integer> list) {
+      ArrayList<Integer> result = new ArrayList<Integer>();
+      for(int i: list) {
+         if(!contains(result, i)) {
+            result.add(i);
+         }
+      }
+      return result;
+   }
+   
+   
+}
+
+##############################################################################
+
+11.17
+
+import java.util.ArrayList;
+public class Main {
+   public static void main(String[] args) {
+      // you may wish to write some code in this main method
+      // to test your method.
+      ArrayList <Integer> myArray1 = new ArrayList <Integer> ();
+      myArray1.add(1);
+      myArray1.add(2);
+      myArray1.add(1);
+      myArray1.add(3);
+      myArray1.add(2);
+      myArray1.add(5);
+      myArray1.add(6);
+      myArray1.add(2);
+      myArray1.add(4);
+      
+      ArrayList <Integer> myArray2 = new ArrayList <Integer> ();
+      myArray2.add(1);
+      myArray2.add(2);
+      myArray2.add(3);
+      System.out.print(countInList(myArray1, myArray2));
+   }
+   
+   public static int countInList(ArrayList<Integer> list1, ArrayList<Integer> list2) {
+        int count = 0;
+
+        for (int value : list1) {
+            if (list2.contains(value)) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+
+   
+}

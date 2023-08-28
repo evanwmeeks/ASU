@@ -1,0 +1,22 @@
+package sandbox;
+
+public class Box {
+	
+    private double height, width, length; 
+    
+    public Box(double height, double width, double length) {
+        this.height = height; 
+        this.width = width; 
+        this.length = length;
+    }
+    
+    
+    public boolean isTall(){
+        if ((height > width) && (height > length)) {
+            return true;
+        }
+        return false;
+    }
+    
+    
+}
